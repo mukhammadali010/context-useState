@@ -1,14 +1,22 @@
-import './App.css';
-import Main from './components/Main/Main';
-import Menu from './components/Menu/Menu';
+import React, { useState } from 'react'
+import {data} from './components/mock/mock'
+import Navbar from './components/Navbar'
+import Todo from './components/Todos'
 
-function App() {
+const App = () => {
+  const [state, setState] = useState(data);
+
+  const onDelete = (id)=>{
+    let res = state.filter((value)=>value.id !== id)
+    setState(res)
+  }
   return (
-   <>
-    <Menu/>
-    <Main/>
-   </>
-  );
+    <div>
+        <Navbar state ={state}/>
+        <Todo state ={state} onDelete ={onDelete}/>
+    </div>
+  )
 }
 
-export default App;
+export default App
+    
