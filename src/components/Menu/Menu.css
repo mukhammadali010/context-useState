@@ -1,0 +1,23 @@
+.menu{
+ border-bottom: 1px solid #eee;
+ display: flex;
+ justify-content: space-between;
+ padding: 1rem 3rem;
+}
+.user{
+
+}
+.cart{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.badge{
+    background-color: red;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.2rem;
+}
